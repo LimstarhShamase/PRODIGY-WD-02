@@ -3,60 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      background-color:black;
-    }
-
-    #container {
-      padding: 40px;
-      border: 4px solid #555;
-      background-color: rgba(221, 221, 221, 1);
-      border-radius: 15px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    #stopwatch {
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-
-    #controls {
-      display: flex;
-      gap: 10px;
-    }
-
-    button {
-      padding: 10px;
-      cursor: pointer;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-
-    #startBtn {
-      background-color: #4CAF50;
-      color: #fff;
-    }
-
-    #pauseBtn {
-      background-color: #FF0000;
-      color: #fff;
-    }
-
-    #resetBtn {
-      background-color: #007BFF;
-      color: #fff;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
   <title>Stopwatch By Limstarh</title>
 </head>
 <body>
@@ -69,35 +16,6 @@
     </div>
   </div>
 
-  <script>
-    let timer;
-    let seconds = 0;
-
-    function start() {
-      if (!timer) {
-        timer = setInterval(updateStopwatch, 1000);
-      }
-    }
-
-    function pause() {
-      clearInterval(timer);
-      timer = null;
-    }
-
-    function updateStopwatch() {
-      seconds++;
-      const hours = Math.floor(seconds / 3600);
-      const minutes = Math.floor((seconds % 3600) / 60);
-      const remainingSeconds = seconds % 60;
-      document.getElementById("stopwatch").innerText = `${hours}:${minutes < 10 ? '0' : ''}${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
-    }
-
-    function reset() {
-      clearInterval(timer);
-      timer = null;
-      seconds = 0;
-      document.getElementById("stopwatch").innerText = '0:00:00';
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
