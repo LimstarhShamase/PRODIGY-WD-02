@@ -5,7 +5,7 @@ body {
       justify-content: center;
       height: 100vh;
       margin: 0;
-      background-color:black;
+      background-color:#007BFF;
     }
 
     #container {
@@ -28,25 +28,15 @@ body {
       gap: 10px;
     }
 
-    button {
+    #startBtn {
       padding: 10px;
       cursor: pointer;
       border: none;
       border-radius: 5px;
       font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    #startBtn:hover {
+      background-color: #0056b3;
     }
 
-    #startBtn {
-      background-color: #4CAF50;
-      color: #fff;
-    }
-
-    #pauseBtn {
-      background-color: #FF0000;
-      color: #fff;
-    }
-
-    #resetBtn {
-      background-color: #007BFF;
-      color: #fff;
-    }
